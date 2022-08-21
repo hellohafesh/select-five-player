@@ -21,3 +21,12 @@ body {
     height: 50px;
     width: 50px;
 }
+
+.card {
+    color: white;
+    background-color: black;
+}
+
+.player {
+    color: rgba(255, 94, 25, 1);
+}
