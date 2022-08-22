@@ -16,9 +16,3 @@ function setTextElementById(elementId, newValue) {
     element.innerText = newValue;
 }
 
-// function validation(Input) {
-//     if ((Input == "") || (isNaN(Input))) {
-//         alert("Empty Field , Enter Money");
-//         return;
-//     }
-// }
