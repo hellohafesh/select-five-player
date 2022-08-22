@@ -15,11 +15,15 @@ function selectplayer(btnId, nameOfPayer) {
                 indexes.push(index);
             }
         }
+        // console.log(playerListArray);
+        // console.log(typeof (playerListArray));
 
-        let arrayy = document.getElementById('playerList').children;
+        let arrayy = playerListArray.children;
+        // console.log(arrayy);
+
+        // let arrayy = document.getElementById('playerList').children;
 
         if (arrayy.length = 0, arrayy.length >= 5) {
-            let dBlock;
             alert("Your Maximum Player Is 5!!");
             return;
 
@@ -38,6 +42,19 @@ function selectplayer(btnId, nameOfPayer) {
                 btnCancle.style.display = 'block';
             }
         }
+        // DisableNextButton();
+        // // const setdisable = btnId.setAttribute(Disabled);
+        // function DisableNextButton(btnId) {
+        //     document.getElementById(btnId).disabled = 'true';
+        // }
+
+
+        const buttonElement = document.getElementById(btnId);
+
+        buttonElement.setAttribute('disabled', '');
+        console.log(buttonElement);
+
+
 
     })
 
@@ -45,27 +62,26 @@ function selectplayer(btnId, nameOfPayer) {
 }
 
 
-function getcancle() {
-
-    document.getElementById('btnCancle').addEventListener('click', function () {
-        let listOfOl = document.getElementById('playerList');
 
 
 
-        let array = [];
+// document.getElementById('btnCancle').addEventListener('click', function () {
+//     let listOfOl = document.getElementById('playerList');
 
-        let obj = listOfOl.innerText;
+//     let array = [];
 
-        array.push(obj);
-        let poped = array.pop();
-
-        console.log(array);
-        console.log(poped);
+//     let obj = listOfOl;
 
 
+//     array.push(obj);;
+//     const newarr = listOfOl.splice(-1);
+//     console.log(array);
+//     console.log(newarr);
 
 
-    })
-}
+
+
+// })
+
 
 
