@@ -30,3 +30,7 @@ body {
 .player {
     color: rgba(255, 94, 25, 1);
 }
+
+#btnCancle {
+    display: none;
+}
