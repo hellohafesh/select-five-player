@@ -3,27 +3,22 @@ function selectplayer(btnId, nameOfPayer) {
 
         const playerNameElement = document.getElementById(nameOfPayer);
         let playerName = playerNameElement.innerText;
-        myFunction();
+        btnFunction();
         let list = document.getElementById('playerList');
 
 
 
         const playerListArray = document.getElementById('playerList');
         const indexes = [];
-        for (let index = 0; index < playerListArray.length; index++) {
-            if (playerListArray[index] === 'a') {
+        for (let index = 1; index < playerListArray.length; index++) {
+            if (playerListArray[index]) {
                 indexes.push(index);
             }
         }
-        // console.log(playerListArray);
-        // console.log(typeof (playerListArray));
-
+        // Take MAxiamum 5 Players 
         let arrayy = playerListArray.children;
-        // console.log(arrayy);
 
-        // let arrayy = document.getElementById('playerList').children;
-
-        if (arrayy.length = 0, arrayy.length >= 5) {
+        if (arrayy.length = 1, arrayy.length >= 5) {
             alert("Your Maximum Player Is 5!!");
             return;
 
@@ -33,8 +28,8 @@ function selectplayer(btnId, nameOfPayer) {
             player.appendChild(document.createTextNode(firstName));
             list.appendChild(player);
         }
-
-        function myFunction() {
+        //  button Cancle 
+        function btnFunction() {
             const btnCancle = document.getElementById('btnCancle');
             if (btnCancle.style.display == 'none') {
                 btnCancle.style.display = 'block';
@@ -42,24 +37,50 @@ function selectplayer(btnId, nameOfPayer) {
                 btnCancle.style.display = 'block';
             }
         }
-        // DisableNextButton();
-        // // const setdisable = btnId.setAttribute(Disabled);
-        // function DisableNextButton(btnId) {
-        //     document.getElementById(btnId).disabled = 'true';
-        // }
-
-
+        // Disable Section 
         const buttonElement = document.getElementById(btnId);
 
         buttonElement.setAttribute('disabled', '');
-        console.log(buttonElement);
 
 
+        calculate();
+        function calculate() {
+            document.getElementById('btnCalculate').addEventListener('click', function () {
+
+                const playerNumber = arrayy.length;
+                const playerpaymentInputField = document.getElementById('perPlayerInput');
+                const playerpaymentInputString = playerpaymentInputField.value;
+                const playerpaymentInput = parseInt(playerpaymentInputString);
+
+
+
+                const totalPlayerExpenseValue = playerNumber * playerpaymentInput;
+                const playerExpensesField = document.getElementById('playerExpenses');
+                const playerExpensestring = playerExpensesField.innerText;
+                const playerExpense = parseInt(playerExpensestring);
+
+                playerExpensesField.innerText = totalPlayerExpenseValue;
+
+                // console.log(totalPlayerExpenseValue);
+                // console.log(playerExpensestring);
+                // console.log(playerExpense);
+
+            })
+        }
 
     })
 
 
 }
+
+
+
+
+
+
+
+
+
 
 
 

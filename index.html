@@ -138,13 +138,15 @@
                             <h2 class="text-center player mb-5">Budget</h2>
                             <div class="d-flex text-aling-center justify-content-evenly gap-2">
 
-                                <h6>Per Player </h6> <input type="text" placeholder="Enter Money $">
+                                <h6>Per Player </h6>
+                                <input id="perPlayerInput" type="text" placeholder="Enter Money $">
                             </div>
                             <div class=" text-center ">
-                                <button type="button" class="btn btn-primary mt-3 mb-3">Calculate</button>
+                                <button type="button" id="btnCalculate"
+                                    class="btn btn-primary mt-3 mb-3">Calculate</button>
                                 <div class="d-flex text-aling-center justify-content-evenly mb-3 gap-2">
                                     <p>Player Expenses :</p>
-                                    <p>$ <span>0</span></p>
+                                    <p class="money-style ">$ <span id="playerExpenses">0</span></p>
                                 </div>
                                 <div class="d-flex text-aling-center justify-content-evenly mb-3 gap-2">
 

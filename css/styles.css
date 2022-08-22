@@ -6,6 +6,13 @@ body {
     margin-top: 20px;
 }
 
+.money-style {
+    color: rgba(255, 94, 25, 1);
+    font-family: Berkshire Swash;
+    font-size: 24px;
+    font-weight: 200;
+}
+
 #header-text {
     color: rgba(255, 94, 25, 1);
     font-family: Berkshire Swash;
