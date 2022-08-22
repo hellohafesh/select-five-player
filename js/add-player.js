@@ -4,6 +4,7 @@ function selectplayer(btnId, nameOfPayer) {
         const playerNameElement = document.getElementById(nameOfPayer);
         let playerName = playerNameElement.innerText;
         btnFunction();
+        calculate();
         let list = document.getElementById('playerList');
 
 
@@ -43,7 +44,6 @@ function selectplayer(btnId, nameOfPayer) {
         buttonElement.setAttribute('disabled', '');
 
 
-        calculate();
         function calculate() {
             document.getElementById('btnCalculate').addEventListener('click', function () {
 
@@ -60,8 +60,39 @@ function selectplayer(btnId, nameOfPayer) {
                 const playerExpense = parseInt(playerExpensestring);
 
                 playerExpensesField.innerText = totalPlayerExpenseValue;
+                calculatetotal()
 
-                // console.log(totalPlayerExpenseValue);
+                function calculatetotal() {
+
+                    document.getElementById('calculateTotal').addEventListener('click', function () {
+
+                        console.log(totalPlayerExpenseValue);
+                        const managerpaymentInputField = document.getElementById('managerPay');
+                        const managerpaymentInputString = managerpaymentInputField.value;
+                        const managerpaymentInput = parseInt(managerpaymentInputString);
+
+                        const coachpaymentInputField = document.getElementById('coachPay');
+                        const coachpaymentInputString = coachpaymentInputField.value;
+                        const coachpaymentInput = parseInt(coachpaymentInputString);
+
+                        const totalpaymentInputField = document.getElementById('totalMoney');
+                        const totalpaymentInputString = totalpaymentInputField.innerText;
+                        const totalpaymentInput = parseInt(totalpaymentInputString);
+
+                        const grandtotalpayment = totalPlayerExpenseValue + managerpaymentInput + coachpaymentInput;
+
+                        totalpaymentInputField.innerText = grandtotalpayment;
+
+
+
+
+                    })
+
+
+                }
+
+
+                // 
                 // console.log(playerExpensestring);
                 // console.log(playerExpense);
 
