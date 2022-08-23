@@ -42,8 +42,35 @@ function selectplayer(btnId, nameOfPayer) {
         const buttonElement = document.getElementById(btnId);
         buttonElement.setAttribute('disabled', '');
 
+        document.getElementById('btnCalculate').addEventListener('click', function () {
+            const playerpaymentInput = getInputValueById('perPlayerInput');
+            if (isNaN(playerpaymentInput)) {
+                alert("Field Not Valid , Enter Money");
+                return;
+            }
+            const newpaymentTotal = playerpaymentInput * arrayy.length;
 
-        ssss(arrayy);
+            setTextElementById('playerExpenses', newpaymentTotal);
+
+
+            document.getElementById('calculateTotal').addEventListener('click', function () {
+                const playerExpenses = getElementValueById('playerExpenses');
+                const managerpaymentInput = getInputValueById('managerPay');
+                if (isNaN(managerpaymentInput)) {
+                    alert("Field Not Valid , Enter Money");
+                    return;
+                }
+                const coachpaymentInput = getInputValueById('coachPay');
+                if (isNaN(coachpaymentInput)) {
+                    alert("Field Not Valid , Enter Money");
+                    return;
+                }
+                const paymentTotal = playerExpenses + managerpaymentInput + coachpaymentInput;
+                setTextElementById('totalMoney', paymentTotal);
+            })
+
+        })
+
     })
 
 
