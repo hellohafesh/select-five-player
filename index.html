@@ -13,7 +13,7 @@
 <body class="container">
     <header class=" mt-5">
         <div class="bg-black d-flex  justify-content-center align-items-end text-center mt-5 col-12 ">
-            <img class=" col-3" src="images/h-messi.png" alt="">
+            <img class=" col-3 d-none d-md-block d-lg-block d-xl-block d-xxl-block " src="images/h-messi.png" alt="">
             <div class="mb-5  col-6 text-center">
                 <h1 id="header-text"> FB Football || Make Your Team</h1>
                 <h5 class="text-white ">Here from you choose your favorite player. And calculate how much you can
@@ -21,7 +21,8 @@
                     Premier League.</h5>
                 <button type="button" class="btn btn-primary mt-2">See More</button>
             </div>
-            <img id="ball " class="col-3" src="images/bball.jpg" alt="">
+            <img id="ball " class="col-3 d-none d-md-block d-lg-block d-xl-block d-xxl-block" src="images/bball.jpg"
+                alt="">
         </div>
     </header>
 
@@ -30,10 +31,10 @@
     <main class="mb-5">
 
 
-        <div class="d-lg-flex d-xl-flex d-xxl-flex d-sm-block d-md-block">
+        <div class=" d-xl-flex d-xxl-flex  d-sm-block d-lg-block  d-md-block">
 
 
-            <div class="row row-cols-1 col-8 row-cols-md-3 mb-5 mt-2 g-4">
+            <div class="row row-cols-1 col-12   col-xl-8 col-xxl-8 row-cols-md-3 mb-5 mt-2 g-4">
                 <div class="col">
                     <div class="card">
                         <img src="images/messi.jpg" class="card-img-top" alt="...">
@@ -154,7 +155,7 @@
                 </div>
             </div>
             <div class="">
-                <div class="col-12 ms-5 row-cols-md-12 mb-5 mt-4 g-4">
+                <div class="col-12 ms-auto ms-lg-5 ms-xl-5 ms-xxl-5 me-auto row-cols-md-12 mb-5 mt-4 g-4">
                     <div class="card">
                         <div class=" m-3">
                             <h4 class="text-center player mb-5"> Made Your Team . <br> Select Your Favorite Players</h4>
@@ -167,11 +168,11 @@
                     </div>
                 </div>
 
-                <div class="col-12 ms-5 row-cols-md-12 mb-5 mt-4 g-4">
+                <div class="col-12 ms-auto ms-lg-5 ms-xl-5 ms-xxl-5  me-auto row-cols-md-12 mb-5 mt-4 g-4">
                     <div class="card">
                         <div class=" m-3">
                             <h2 class="text-center player mb-5">Budget</h2>
-                            <div class="d-flex text-aling-center justify-content-evenly gap-2">
+                            <div class="d-flex text-aling-center justify-content-around gap-2">
 
                                 <h6>Per Player </h6>
                                 <input class="rounded" id="perPlayerInput" type="text" placeholder="Enter Money $">
@@ -179,23 +180,23 @@
                             <div class=" text-center ">
                                 <button type="button" id="btnCalculate"
                                     class="btn btn-primary mt-3 mb-3">Calculate</button>
-                                <div class="d-flex text-aling-center justify-content-evenly mb-3 gap-2">
+                                <div class="d-flex text-aling-center justify-content-around mb-3 gap-2">
                                     <p>Player Expenses :</p>
                                     <p class="money-style ">$ <span id="playerExpenses">0</span></p>
                                 </div>
-                                <div class="d-flex text-aling-center justify-content-evenly mb-3 gap-2">
+                                <div class="d-flex text-aling-center justify-content-around mb-3 gap-2">
 
                                     <h6>Manager Pay: </h6> <input class="rounded" id="managerPay" type="text"
                                         placeholder="Enter Money $">
                                 </div>
-                                <div class="d-flex text-aling-center justify-content-evenly gap-2">
+                                <div class="d-flex text-aling-center justify-content-around gap-2">
 
                                     <h6>Coach Pay: </h6> <input id="coachPay" class="rounded" type="text"
                                         placeholder="Enter Money $">
                                 </div>
                                 <button type="button" id="calculateTotal" class="btn btn-primary mt-3 mb-3">Calculate
                                     Total</button>
-                                <div class="d-flex text-aling-center justify-content-evenly mb-3 gap-2">
+                                <div class="d-flex text-aling-center justify-content-around mb-3 gap-2">
                                     <p>Total Cost:</p>
                                     <p class=" player">$ <span id="totalMoney">0</span></p>
                                 </div>
