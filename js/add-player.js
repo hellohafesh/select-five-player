@@ -17,7 +17,7 @@ function selectplayer(btnId, nameOfPayer) {
             }
         }
         // Take MAxiamum 5 Players 
-        let arrayy = playerListArray.children;
+        const arrayy = playerListArray.children;
 
         if (arrayy.length = 1, arrayy.length >= 5) {
             alert("Your Maximum Player Is 5!!");
@@ -45,15 +45,17 @@ function selectplayer(btnId, nameOfPayer) {
 
         document.getElementById('btnCalculate').addEventListener('click', function () {
             const playerpaymentInput = getInputValueById('perPlayerInput');
-            // validation(playerpaymentInput);
 
-            if ((playerpaymentInput == "") || (isNaN(playerpaymentInput))) {
+
+            if (isNaN(playerpaymentInput)) {
                 alert("Field Not Valid , Enter Money");
                 return;
             }
 
-            const newpaymentTotal = arrayy.length * playerpaymentInput;
 
+
+            const newpaymentTotal = playerpaymentInput * arrayy.length;
+            console.log(typeof (arrayy.length));
             setTextElementById('playerExpenses', newpaymentTotal);
         })
 
@@ -62,13 +64,13 @@ function selectplayer(btnId, nameOfPayer) {
             const playerExpenses = getElementValueById('playerExpenses');
 
             const managerpaymentInput = getInputValueById('managerPay');
-            if ((managerpaymentInput == "") || (isNaN(managerpaymentInput))) {
+            if (isNaN(managerpaymentInput)) {
                 alert("Field Not Valid , Enter Money");
                 return;
             }
 
             const coachpaymentInput = getInputValueById('coachPay');
-            if ((coachpaymentInput == "") || (isNaN(coachpaymentInput))) {
+            if (isNaN(coachpaymentInput)) {
                 alert("Field Not Valid , Enter Money");
                 return;
             }
